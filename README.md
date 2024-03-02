@@ -1,56 +1,56 @@
 # C++ program
 
-Questo repository contiene vari programmi in c++ che utilizzano librerie esterne come boost/asio, windows.h ecc
+This repository contains various C++ programs that utilize external libraries such as `boost/asio`, `windows.h`, etc.
 
-## Installazione
+## Installation
 
 ### Linux
 
-#### Utilizzando lo script di installazione
+#### Using the installation script
 
-Per installare le dipendenze e configurare l'ambiente di sviluppo su Linux, eseguire lo script di installazione fornito:
+To install dependencies and set up the development environment on Linux, run the provided installation script:
 
 ```bash
 ./install.sh
 ```
-Questo installerà il compilatore C++, strumenti di sviluppo essenziali, CMake (opzionale), Git (opzionale), le librerie Boost e, se desiderato, Visual Studio Code.
-Utilizzando CMake
 
-Se si preferisce utilizzare CMake per compilare il progetto:
+This will install the C++ compiler, essential development tools, CMake (optional), Git (optional), Boost libraries, and, if desired, Visual Studio Code.
+Using CMake
+
+If you prefer using CMake to build the project:
 
 ```bash
+
 mkdir build
 cd build
 cmake ..
 make
 ```
+### Windows
 
+To clone and compile the project on Windows using git, follow these steps:
 
-Windows
+Install git.
 
-Per clonare e compilare il progetto su Windows con git, seguire questi passaggi:
-
-installare git,
-
-Clonare il repository:
+Clone the repository:
 
 ```bash
 
 git clone https://github.com/riccio8/examples-of-program-in-c-
 ```
 
-Aprire il progetto nella tua IDE preferita o utilizzare il prompt dei comandi.
+Open the project in your preferred IDE or use the command prompt.
 
-Configurare e compilare il progetto utilizzando il tuo compilatore C++ preferito.
+Configure and build the project using your preferred C++ compiler.
 
-Utilizzo
+## Usage
 
-Dopo aver compilato il progetto, eseguire l'eseguibile generato. Il programma si metterà in ascolto su una porta specifica per le connessioni in ingresso tramite socket TCP.
-Contributi
+After compiling the project, run the generated executable. 
 
-Se trovi bug o hai suggerimenti per migliorare il progetto, non esitare a inviare una pull request o aprire un'issue.
+## Contributions
+
+If you find bugs or have suggestions to improve the project, feel free to submit a pull request or open an issue.
 
 
-Licenza
+License
 
-https://github.com/riccio8/examples-of-program-in-c-
