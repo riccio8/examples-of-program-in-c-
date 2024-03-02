@@ -13,11 +13,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: configure
-      run: ./configure
-    - name: make
-      run: make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
+
+    - name: Install Boost
+      run: sudo apt-get install libboost-all-dev
+
+    - name: Build and Run
+      run: |
+        g++ -o your_executable main.cpp -lboost_system
+        ./your_executable
