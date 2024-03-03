@@ -1,3 +1,5 @@
+// on linux it won't work
+
 #include <windows.h>
 
 using namespace std;
