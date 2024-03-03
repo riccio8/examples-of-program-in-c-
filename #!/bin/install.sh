@@ -18,7 +18,6 @@ sudo apt install cmake
 sudo apt install git
 
 # Install additional libraries (optional depending on your project requirements)
-# Example: Boost C++ Libraries
 sudo apt install libboost-all-dev
 
 # Optionally, you can install an IDE for C++ development
