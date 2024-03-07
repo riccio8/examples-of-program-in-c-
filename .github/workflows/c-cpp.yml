@@ -19,5 +19,5 @@ jobs:
 
     - name: Build and Run
       run: |
-        g++ -o your_executable main.cpp -lboost_system
-        ./your_executable
+        g++ -o name_of_your_executable main.cpp -lboost_system
+        ./name_of_your_executable
