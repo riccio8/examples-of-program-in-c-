@@ -41,7 +41,17 @@ git clone https://github.com/riccio8/examples-of-program-in-c-
 
 Open the project in your preferred IDE or use the command prompt.
 
-Configure and build the project using your preferred C++ compiler.
+Configure and build the project using your preferred C++ compiler and download the boost asio library from here:
+
+```bash
+https://www.boost.org/doc/libs/1_84_0/doc/html/boost_asio.html
+```
+
+or from here:
+
+```bash
+https://think-async.com/Asio/Download.html
+```
 
 ## Usage
 
