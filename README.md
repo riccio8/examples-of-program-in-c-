@@ -65,3 +65,8 @@ If you find bugs or have suggestions to improve the project, feel free to submit
 ## License
 
 ```https://github.com/riccio8/examples-of-program-in-c-```
+
+
+##IMPORTANT!
+
+You have to include file header, precompiled library, executable, dynamic and static library and so on when you download the file, because all this files are exclude in the .gitignore file
