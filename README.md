@@ -8,10 +8,10 @@ This repository contains various C++ programs that utilize external libraries su
 
 #### Using the installation script
 
-To install dependencies and set up the development environment on Linux, run the provided installation script:
+To install dependencies and set up the development environment on Linux, navigate in the correct path (#!\bin) and run the provided installation script:
 
 ```bash
-./install.sh
+bash install.sh
 ```
 
 This will install the C++ compiler, essential development tools, CMake (optional), Git (optional), Boost libraries, and, if desired, Visual Studio Code.
