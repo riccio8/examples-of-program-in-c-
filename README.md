@@ -11,6 +11,7 @@ This repository contains various C++ programs that utilize external libraries su
 To install dependencies and set up the development environment on Linux, navigate in the correct path (#!\bin) and run the provided installation script:
 
 ```bash
+cd #!\bin\
 bash install.sh
 ```
 
