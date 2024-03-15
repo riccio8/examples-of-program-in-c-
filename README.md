@@ -71,7 +71,9 @@ docker run --rm cpp-windows-container
 ```
 Notes
 
-    The Dockerfile sets up the environment to compile and execute block.cpp on a Windows-based Docker container so YOUT OS MUST BE WINDOWS if you eant to run docker with this engine.
+    The Dockerfile sets up the environment to compile and execute block.cpp on a Windows-based Docker 
+    container so YOUR OS MUST BE WINDOWS if you eant to run docker with this engine.
+    
     Ensure that Docker is installed and running on your system before following the above steps.
     Replace cpp-windows-container with your preferred image name if desired.
     
