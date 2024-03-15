@@ -65,7 +65,9 @@ If you find bugs or have suggestions to improve the project, feel free to submit
 
 ## License
 
-```https://github.com/riccio8/examples-of-program-in-c-```
+```bash 
+https://github.com/riccio8/examples-of-program-in-c-
+```
 
 
 ## IMPORTANT!
