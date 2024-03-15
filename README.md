@@ -45,14 +45,41 @@ Open the project in your preferred IDE or use the command prompt.
 Configure and build the project using your preferred C++ compiler and download the boost asio library from here:
 
 ```bash
+
 https://www.boost.org/doc/libs/1_84_0/doc/html/boost_asio.html
 ```
 
 or from here:
 
 ```bash
+
 https://think-async.com/Asio/Download.html
 ```
+
+### Docker
+
+In this repository, a Docker container has been set up to run the script `block.cpp`. The Docker container is configured using a Dockerfile named `block.dockerfile`.
+Instructions
+
+Building the Docker Image:
+
+```docker
+
+docker build -t cpp-windows-container -f block.dockerfile .
+```
+
+Running the Docker Container:
+
+```docker
+
+docker run --rm cpp-windows-container
+```
+Notes
+
+    The Dockerfile sets up the environment to compile and execute block.cpp on a Windows-based Docker container.
+    Ensure that Docker is installed and running on your system before following the above steps.
+    Replace cpp-windows-container with your preferred image name if desired.
+`I NEED TO TEST THIS TYPE OF INSTALLATION`
 
 ## Usage
 
