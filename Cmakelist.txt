@@ -1,0 +1,49 @@
+cmake_minimum_required(VERSION 3.0)
+project(MyProject)
+
+find_package(Boost REQUIRED COMPONENTS system)
+
+
+add_executable(server server.cpp)
+target_link_libraries(server Boost::system)
+
+if(UNIX AND NOT APPLE)
+    find_program(APT_PROGRAM apt)
+    if(APT_PROGRAM)
+        execute_process(COMMAND ${APT_PROGRAM} list --installed OUTPUT_VARIABLE APT_INSTALLED_PACKAGES)
+        if(NOT "${APT_INSTALLED_PACKAGES}" MATCHES "libboost-all-dev")
+            message(STATUS "Installing libboost-all-dev using apt...")
+            execute_process(COMMAND ${APT_PROGRAM} install -y libboost-all-dev)
+        endif()
+    endif()
+endif()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Add executable for the first program
+add_executable(program1 program1.cpp)
+target_link_libraries(program1 Boost::system)
+
+# Add executable for the second program
+add_executable(program2 program2.cpp)
+target_link_libraries(program2 Boost::system)
+
+# And so on for other programs...
