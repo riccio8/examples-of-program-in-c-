@@ -3,12 +3,25 @@
 # insteaad, with docker, you can virtualize your application and run everywhere
 # this is an experiment and i'll test it if it works 
   
-FROM mcr.microsoft.com/windows/servercore:ltsc2019
+FROM mcr.microsoft.com/windows/servercore:ltsc2019 AS builder
+
+SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
+
+WORKDIR /app
 
 COPY block.cpp .
 
-RUN cl /EHsc block.cpp /link /out:main.exe
+RUN cl /EHsc block.cpp /link /out:block.exe
 
+# using wine for running exe bin on linux
+FROM i386/debian:buster-slim
 
-CMD ["block.exe"]
-CMD ["echo", "docker run successfully"]
+RUN dpkg --add-architecture i386 && \
+    apt-get update && \
+    apt-get install -y --no-install-recommends wine && \
+    rm -rf /var/lib/apt/lists/*
+
+COPY --from=builder /app/block.exe .
+
+CMD ["wine", "block.exe"]
+CMD ["echo", "Esecuzione di Docker riuscita"]
