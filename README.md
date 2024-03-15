@@ -36,7 +36,6 @@ Install git.
 Clone the repository:
 
 ```bash
-
 git clone https://github.com/riccio8/examples-of-program-in-c-
 ```
 
@@ -45,14 +44,12 @@ Open the project in your preferred IDE or use the command prompt.
 Configure and build the project using your preferred C++ compiler and download the boost asio library from here:
 
 ```bash
-
 https://www.boost.org/doc/libs/1_84_0/doc/html/boost_asio.html
 ```
 
 or from here:
 
 ```bash
-
 https://think-async.com/Asio/Download.html
 ```
 
@@ -63,15 +60,13 @@ Instructions
 
 Building the Docker Image:
 
-```docker
-
+```bash
 docker build -t cpp-windows-container -f block.dockerfile .
 ```
 
 Running the Docker Container:
 
-```docker
-
+```bash
 docker run --rm cpp-windows-container
 ```
 Notes
