@@ -182,3 +182,11 @@ entry0 0x21a4 [DATA] lea rdi, [main]
 └ 0x000023dd      e81efdffff     call sym.imp.exit
 | // true: 0x000023e2
 [0x00002279]> 
+
+
+
+
+
+
+
+; the virtual address probably will not be the same like mine
