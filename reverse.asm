@@ -1,15 +1,15 @@
-# I used radare2 for finding the source code of the file that I uploaded, the name of the file is `reversing the program.cpp`
-# I wanna do exercises in revers engeeniring, so i did it on my program, here the step that i did:
-# first I started radare2, deleting the cache
-# than, I analyzed the functions, variables with the `aaa` command (if you want a more detailed analyzation you can use `aaaa` instead of `aaa`)
-# than I print all the function that are include in the program, and i found the main function
-# I navigated to the main function with the "s" command
-# the axt command is really helpful because it search in the whole program where the current function (the main function in this case) is called from
-# using the pdf or pdr function (print disassembly function) allow you to see the the assemblt code
-# if you want to save the asm script in a file just type: `pdf > output.asm` and this will save in the file output.asm the code
-# ps: instead of navigate with the s comand, you can use @ and the name of the function or the virtual addres, because in radare2 the @ is named like "at", so if you type pdf @main or axt@main or pdr @entry0 you can see the function without navigate to it.
-# radare2 is very usefull, free and with a lot of tool, like debugging, leaving comment, see the tree program (with the V command) and so on
-# here the results
+; I used radare2 for finding the source code of the file that I uploaded, the name of the file is `reversing the program.cpp`
+; I wanna do exercises in revers engeeniring, so i did it on my program, here the step that i did:
+; first I started radare2, deleting the cache
+; than, I analyzed the functions, variables with the `aaa` command (if you want a more detailed analyzation you can use `aaaa` instead of `aaa`)
+; than I print all the function that are include in the program, and i found the main function
+; I navigated to the main function with the "s" command
+; the axt command is really helpful because it search in the whole program where the current function (the main function in this case) is called from
+; using the pdf or pdr function (print disassembly function) allow you to see the the assemblt code
+; if you want to save the asm script in a file just type: `pdf > output.asm` and this will save in the file output.asm the code
+; ps: instead of navigate with the s comand, you can use @ and the name of the function or the virtual addres, because in radare2 the @ is named like "at", so if you type pdf @main or axt@main or pdr @entry0 you can see the function without navigate to it.
+; radare2 is very usefull, free and with a lot of tool, like debugging, leaving comment, see the tree program (with the V command) and so on
+; here the results
 
 
 
