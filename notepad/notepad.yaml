@@ -1,0 +1,29 @@
+application:
+  name: My Notepad
+  description: A simple notepad application
+  development_status: in_progress
+
+dependencies:
+  - wxWidgets
+  - wx/wx.h
+  - wx/textctrl.h
+  - wx/menu.h
+  - wx/frame.h
+  - wx/filedlg.h
+
+platform:
+  supported_os:
+    - Windows
+    - macOS
+    - Linux
+
+  minimum_requirements:
+    cpu: dual-core 2 GHz
+    ram: 2 GB
+    disk_space: 100 MB
+
+development:
+  repository: https://github.com/riccio8/examples-of-program-in-cpp
+  author: Riccio8
+  profile: https://github.com/riccio8
+  contributors: -----------
