@@ -39,11 +39,11 @@ endif()
 
 
 # Add executable for the first program
-add_executable(program1 program1.cpp)
-target_link_libraries(program1 Boost::system)
+# add_executable(program1 program1.cpp)
+# target_link_libraries(program1 Boost::system)
 
 # Add executable for the second program
-add_executable(program2 program2.cpp)
-target_link_libraries(program2 Boost::system)
+# add_executable(program2 program2.cpp)
+# target_link_libraries(program2 Boost::system)
 
 # And so on for other programs...
