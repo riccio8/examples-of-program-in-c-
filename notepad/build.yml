@@ -1,0 +1,40 @@
+name: Build Windows
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
+    - name: Install MinGW-w64
+      run: |
+        choco install mingw
+        choco install mingw-w64
+
+    - name: Set up MinGW-w64 environment
+      run: |
+        echo ::add-path::C:\tools\mingw64\bin
+        echo ::add-path::C:\tools\mingw64\x86_64-w64-mingw32\bin
+        export PATH=$PATH:/c/tools/mingw64/bin:/c/tools/mingw64/x86_64-w64-mingw32/bin
+
+    - name: Install wxWidgets dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libwxgtk3.0-dev
+
+    - name: Compile application
+      run: |
+        g++ -o notepad.exe notepad.cpp `wx-config --cxxflags --libs`
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: notepad-windows
+        path: notepad.exe
