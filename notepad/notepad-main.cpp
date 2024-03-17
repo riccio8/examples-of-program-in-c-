@@ -1,4 +1,6 @@
 // the code isn't finish yet
+//ps: during the compilation: └─$ g++ -o notep  notep.cpp `wx-config --cxxflags --libs`
+
 
 
 #include <wx/wx.h>
