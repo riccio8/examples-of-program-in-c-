@@ -1,0 +1,22 @@
+{
+  "dependencies": [
+    {
+      "name": "Boost.Asio"
+    },
+    {
+      "name": "wxWidgets",
+      "components": [
+        "base",
+        "core",
+        "gui",
+        "notebook",
+        "ctrltext"
+      ]
+    },
+    {
+      "name": "Compiler",
+      "OS": "linux-distributions"
+      "get-error-compiling": "g++ -o notep notep.cpp `wx-config --cxxflags --libs`"
+    }
+  ]
+}
