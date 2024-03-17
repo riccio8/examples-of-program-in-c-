@@ -1,11 +1,12 @@
-// here the hello world file written in c++
-
 #include <iostream>
 
-using namespace std;
-
-int main()
+int main() 
 {
-  cout << "Hello, World!" << endl;
-  return 0;
+	int a = 1;
+	int b = 2;
+	int stand = a;
+	a = b;
+	b = stand;
+	std::cout << a;
+    return 0;
 }
