@@ -1,0 +1,55 @@
+name: Build Windows and C/C++
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_windows:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
+    - name: Install MinGW-w64
+      run: |
+        choco install mingw
+        choco install mingw-w64
+
+    - name: Set up MinGW-w64 environment
+      run: |
+        echo ::add-path::C:\tools\mingw64\bin
+        echo ::add-path::C:\tools\mingw64\x86_64-w64-mingw32\bin
+        export PATH=$PATH:/c/tools/mingw64/bin:/c/tools/mingw64/x86_64-w64-mingw32/bin
+
+    - name: Install wxWidgets dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libwxgtk3.0-dev
+
+    - name: Compile application
+      run: |
+        g++ -o notepad.exe notepad.cpp `wx-config --cxxflags --libs`
+
+    - name: Upload Windows artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: notepad-windows
+        path: notepad.exe
+
+  build_cpp:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Install Boost
+      run: sudo apt-get install libboost-all-dev
+
+    - name: Build and Run
+      run: |
+        g++ -o name_of_your_executable main.cpp -lboost_system
+        ./name_of_your_executable
