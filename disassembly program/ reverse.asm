@@ -85,43 +85,43 @@ entry0 0x21a4 [DATA] lea rdi, [main]
 ; 6   0x000030e2 0x000030e2 6   7    .rodata ascii Thomas
 ; 7   0x000030e9 0x000030e9 7   8    .rodata ascii Turbato
 
-[0x00002279]> pdr
-  ; DATA XREF from entry0 @ 0x21a4
-┌ 361: int main (int argc, char **argv, char **envp);
-│ ; var int64_t var_22h @ rbp-0x22
-│ ; var int64_t var_21h @ rbp-0x21
-│ ; var int64_t var_20h @ rbp-0x20
-│ ; var int64_t var_18h @ rbp-0x18
-│ 0x00002279      55             push rbp
-│ 0x0000227a      4889e5         mov rbp, rsp
-│ 0x0000227d      488d05840d00.  lea rax, str.Write_an_username:_      ; 0x3008 ; "Write an username: "
-│ 0x00002284      4889c6         mov rsi, rax
-│ 0x00002287      488d05322e00.  lea rax, obj.std::cout                ; loc.__bss_start
-│                                                                      ; 0x50c0                                                                                                                                                            
-│ 0x0000228e      4889c7         mov rdi, rax
-│ 0x00002291      e81afeffff     call sym std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) ; sym.imp.std::basic_ostream_char__std::char_traits_char____std::operator____std::char_traits_char____std::basic_ostream_char__std::char_traits_char_____char_const_                                                                                                          
-│ 0x00002296      488b151b2d00.  mov rdx, qword [0x00004fb8]           ; [0x4fb8:8]=0x5450 method.std::basic_ostream_char__std::char_traits_char____std::endl_char__std.char_traits_char____std::basic_ostream_char__std::char_traits_char____                                                                                                                                                                                                                                        
-│ 0x0000229d      4889d6         mov rsi, rdx
-│ 0x000022a0      4889c7         mov rdi, rax
-│ 0x000022a3      e818feffff     call sym std::ostream::operator<<(std::ostream& (*)(std::ostream&)) ; sym.imp.std::ostream::operator___std::ostream____std::ostream__
-│ 0x000022a8      488d05913000.  lea rax, obj.tried_username_abi:cxx11_ ; 0x5340
-│ 0x000022af      4889c6         mov rsi, rax
-│ 0x000022b2      488d05272f00.  lea rax, obj.std::cin                 ; 0x51e0
-│ 0x000022b9      4889c7         mov rdi, rax
-│ 0x000022bc      e85ffeffff     call sym std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) ; sym.imp.std::basic_istream_char__std::char_traits_char____std::operator___char__std::char_traits_char___std::allocator_char____std::basic_istream_char__std::char_traits_char_____std::__cxx11::basic_string_char__std::char_traits_char___std::allocator_char____                                                                                                                                                     
-│ 0x000022c1      488d05383000.  lea rax, obj.username_abi:cxx11_      ; 0x5300
-│ 0x000022c8      4889c6         mov rsi, rax
-│ 0x000022cb      488d056e3000.  lea rax, obj.tried_username_abi:cxx11_ ; 0x5340
-│ 0x000022d2      4889c7         mov rdi, rax
-│ 0x000022d5      e89c040000     call method bool std::operator==<char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) ; method.bool_std::operator_char__std::char_traits_char___std.allocator_char____std::__cxx11::basic_string_char__std::char_traits_char___std::allocator_char____const__std::__cxx11::basic_string_char__std::char_traits_char___std::allocator_char____const                                                                                                                                                              
-│ 0x000022da      84c0           test al, al
-│ 0x000022dc      0f84cb000000   je 0x23ad
-| // true: 0x000023ad  false: 0x000022e2
-│ 0x000022e2      488d05370d00.  lea rax, str.The_username_is_correct__now_write_the_password:_ ; 0x3020 ; "The username is correct, now write the password: "
-│ 0x000022e9      4889c6         mov rsi, rax
-│ 0x000022ec      488d05cd2d00.  lea rax, obj.std::cout                ; loc.__bss_start
-│                                                                      ; 0x50c0                                                                                                                                                            
-│ 0x000022f3      4889c7         mov rdi, rax
+; [0x00002279]> pdr
+;   ; DATA XREF from entry0 @ 0x21a4
+; ┌ 361: int main (int argc, char **argv, char **envp);
+; │ ; var int64_t var_22h @ rbp-0x22
+; │ ; var int64_t var_21h @ rbp-0x21
+; │ ; var int64_t var_20h @ rbp-0x20
+; │ ; var int64_t var_18h @ rbp-0x18
+; │ 0x00002279      55             push rbp
+; │ 0x0000227a      4889e5         mov rbp, rsp
+; │ 0x0000227d      488d05840d00.  lea rax, str.Write_an_username:_      ; 0x3008 ; "Write an username: "
+; │ 0x00002284      4889c6         mov rsi, rax
+; │ 0x00002287      488d05322e00.  lea rax, obj.std::cout                ; loc.__bss_start
+; │                                                                      ; 0x50c0                                                                                                                                                            
+; │ 0x0000228e      4889c7         mov rdi, rax
+; │ 0x00002291      e81afeffff     call sym std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) ; sym.imp.std::basic_ostream_char__std::char_traits_char____std::operator____std::char_traits_char____std::basic_ostream_char__std::char_traits_char_____char_const_                                                                                                          
+; │ 0x00002296      488b151b2d00.  mov rdx, qword [0x00004fb8]           ; [0x4fb8:8]=0x5450 method.std::basic_ostream_char__std::char_traits_char____std::endl_char__std.char_traits_char____std::basic_ostream_char__std::char_traits_char____                                                                                                                                                                                                                                        
+; │ 0x0000229d      4889d6         mov rsi, rdx
+; │ 0x000022a0      4889c7         mov rdi, rax
+; │ 0x000022a3      e818feffff     call sym std::ostream::operator<<(std::ostream& (*)(std::ostream&)) ; sym.imp.std::ostream::operator___std::ostream____std::ostream__
+; │ 0x000022a8      488d05913000.  lea rax, obj.tried_username_abi:cxx11_ ; 0x5340
+; │ 0x000022af      4889c6         mov rsi, rax
+; │ 0x000022b2      488d05272f00.  lea rax, obj.std::cin                 ; 0x51e0
+; │ 0x000022b9      4889c7         mov rdi, rax
+; │ 0x000022bc      e85ffeffff     call sym std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) ; sym.imp.std::basic_istream_char__std::char_traits_char____std::operator___char__std::char_traits_char___std::allocator_char____std::basic_istream_char__std::char_traits_char_____std::__cxx11::basic_string_char__std::char_traits_char___std::allocator_char____                                                                                                                                                     
+; │ 0x000022c1      488d05383000.  lea rax, obj.username_abi:cxx11_      ; 0x5300
+; │ 0x000022c8      4889c6         mov rsi, rax
+; │ 0x000022cb      488d056e3000.  lea rax, obj.tried_username_abi:cxx11_ ; 0x5340
+; │ 0x000022d2      4889c7         mov rdi, rax
+; │ 0x000022d5      e89c040000     call method bool std::operator==<char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) ; method.bool_std::operator_char__std::char_traits_char___std.allocator_char____std::__cxx11::basic_string_char__std::char_traits_char___std::allocator_char____const__std::__cxx11::basic_string_char__std::char_traits_char___std::allocator_char____const                                                                                                                                                              
+; │ 0x000022da      84c0           test al, al
+; │ 0x000022dc      0f84cb000000   je 0x23ad
+; | // true: 0x000023ad  false: 0x000022e2
+; │ 0x000022e2      488d05370d00.  lea rax, str.The_username_is_correct__now_write_the_password:_ ; 0x3020 ; "The username is correct, now write the password: "
+; │ 0x000022e9      4889c6         mov rsi, rax
+; │ 0x000022ec      488d05cd2d00.  lea rax, obj.std::cout                ; loc.__bss_start
+; │                                                                      ; 0x50c0                                                                                                                                                            
+; │ 0x000022f3      4889c7         mov rdi, rax
 │ 0x000022f6      e8b5fdffff     call sym std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) ; sym.imp.std::basic_ostream_char__std::char_traits_char____std::operator____std::char_traits_char____std::basic_ostream_char__std::char_traits_char_____char_const_                                                                                                          
 │ 0x000022fb      488b15b62c00.  mov rdx, qword [0x00004fb8]           ; [0x4fb8:8]=0x5450 method.std::basic_ostream_char__std::char_traits_char____std::endl_char__std.char_traits_char____std::basic_ostream_char__std::char_traits_char____                                                                                                                                                                                                                                        
 │ 0x00002302      4889d6         mov rsi, rdx
@@ -149,39 +149,39 @@ entry0 0x21a4 [DATA] lea rdi, [main]
 │ 0x0000235c      488b15552c00.  mov rdx, qword [0x00004fb8]           ; [0x4fb8:8]=0x5450 method.std::basic_ostream_char__std::char_traits_char____std::endl_char__std.char_traits_char____std::basic_ostream_char__std::char_traits_char____                                                                                                                                                                                                                                        
 │ 0x00002363      4889d6         mov rsi, rdx
 │ 0x00002366      4889c7         mov rdi, rax
-│ 0x00002369      e852fdffff     call sym std::ostream::operator<<(std::ostream& (*)(std::ostream&)) ; sym.imp.std::ostream::operator___std::ostream____std::ostream__
-│ 0x0000236e      bf00000000     mov edi, 0
-│ 0x00002373      e888fdffff     call sym.imp.exit
-| // true: 0x00002378
-│ ; CODE XREF from main @ 0x2341
-│ 0x00002378      488d05eb0c00.  lea rax, str.put_ur_ass_out_of_here   ; 0x306a ; "put ur ass out of here"
-│ 0x0000237f      4889c6         mov rsi, rax
-│ 0x00002382      488d05372d00.  lea rax, obj.std::cout                ; loc.__bss_start
-│                                                                      ; 0x50c0                                                                                                                                                            
-│ 0x00002389      4889c7         mov rdi, rax
-│ 0x0000238c      e81ffdffff     call sym std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) ; sym.imp.std::basic_ostream_char__std::char_traits_char____std::operator____std::char_traits_char____std::basic_ostream_char__std::char_traits_char_____char_const_                                                                                                          
-│ 0x00002391      488b15202c00.  mov rdx, qword [0x00004fb8]           ; [0x4fb8:8]=0x5450 method.std::basic_ostream_char__std::char_traits_char____std::endl_char__std.char_traits_char____std::basic_ostream_char__std::char_traits_char____                                                                                                                                                                                                                                        
-│ 0x00002398      4889d6         mov rsi, rdx
-│ 0x0000239b      4889c7         mov rdi, rax
-│ 0x0000239e      e81dfdffff     call sym std::ostream::operator<<(std::ostream& (*)(std::ostream&)) ; sym.imp.std::ostream::operator___std::ostream____std::ostream__
-│ 0x000023a3      bf00000000     mov edi, 0
-│ 0x000023a8      e853fdffff     call sym.imp.exit
-| // true: 0x000023ad
-│ ; CODE XREF from main @ 0x22dc
-│ 0x000023ad      488d05d40c00.  lea rax, str.seriusly__put_ur_ass_out_of_here ; 0x3088 ; "seriusly? put ur ass out of here"
-│ 0x000023b4      4889c6         mov rsi, rax
-│ 0x000023b7      488d05022d00.  lea rax, obj.std::cout                ; loc.__bss_start
-│                                                                      ; 0x50c0                                                                                                                                                            
-│ 0x000023be      4889c7         mov rdi, rax
-│ 0x000023c1      e8eafcffff     call sym std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) ; sym.imp.std::basic_ostream_char__std::char_traits_char____std::operator____std::char_traits_char____std::basic_ostream_char__std::char_traits_char_____char_const_                                                                                                          
-│ 0x000023c6      488b15eb2b00.  mov rdx, qword [0x00004fb8]           ; [0x4fb8:8]=0x5450 method.std::basic_ostream_char__std::char_traits_char____std::endl_char__std.char_traits_char____std::basic_ostream_char__std::char_traits_char____                                                                                                                                                                                                                                        
-│ 0x000023cd      4889d6         mov rsi, rdx
-│ 0x000023d0      4889c7         mov rdi, rax
-│ 0x000023d3      e8e8fcffff     call sym std::ostream::operator<<(std::ostream& (*)(std::ostream&)) ; sym.imp.std::ostream::operator___std::ostream____std::ostream__
-│ 0x000023d8      bf00000000     mov edi, 0
-└ 0x000023dd      e81efdffff     call sym.imp.exit
-| // true: 0x000023e2
-[0x00002279]> 
+; │ 0x00002369      e852fdffff     call sym std::ostream::operator<<(std::ostream& (*)(std::ostream&)) ; sym.imp.std::ostream::operator___std::ostream____std::ostream__
+; │ 0x0000236e      bf00000000     mov edi, 0
+; │ 0x00002373      e888fdffff     call sym.imp.exit
+; | // true: 0x00002378
+; │ ; CODE XREF from main @ 0x2341
+; │ 0x00002378      488d05eb0c00.  lea rax, str.put_ur_ass_out_of_here   ; 0x306a ; "put ur ass out of here"
+; │ 0x0000237f      4889c6         mov rsi, rax
+; │ 0x00002382      488d05372d00.  lea rax, obj.std::cout                ; loc.__bss_start
+; │                                                                      ; 0x50c0                                                                                                                                                            
+; │ 0x00002389      4889c7         mov rdi, rax
+; │ 0x0000238c      e81ffdffff     call sym std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) ; sym.imp.std::basic_ostream_char__std::char_traits_char____std::operator____std::char_traits_char____std::basic_ostream_char__std::char_traits_char_____char_const_                                                                                                          
+; │ 0x00002391      488b15202c00.  mov rdx, qword [0x00004fb8]           ; [0x4fb8:8]=0x5450 method.std::basic_ostream_char__std::char_traits_char____std::endl_char__std.char_traits_char____std::basic_ostream_char__std::char_traits_char____                                                                                                                                                                                                                                        
+; │ 0x00002398      4889d6         mov rsi, rdx
+; │ 0x0000239b      4889c7         mov rdi, rax
+; │ 0x0000239e      e81dfdffff     call sym std::ostream::operator<<(std::ostream& (*)(std::ostream&)) ; sym.imp.std::ostream::operator___std::ostream____std::ostream__
+; │ 0x000023a3      bf00000000     mov edi, 0
+; │ 0x000023a8      e853fdffff     call sym.imp.exit
+; | // true: 0x000023ad
+; │ ; CODE XREF from main @ 0x22dc
+; │ 0x000023ad      488d05d40c00.  lea rax, str.seriusly__put_ur_ass_out_of_here ; 0x3088 ; "seriusly? put ur ass out of here"
+; │ 0x000023b4      4889c6         mov rsi, rax
+; │ 0x000023b7      488d05022d00.  lea rax, obj.std::cout                ; loc.__bss_start
+; │                                                                      ; 0x50c0                                                                                                                                                            
+; │ 0x000023be      4889c7         mov rdi, rax
+; │ 0x000023c1      e8eafcffff     call sym std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) ; sym.imp.std::basic_ostream_char__std::char_traits_char____std::operator____std::char_traits_char____std::basic_ostream_char__std::char_traits_char_____char_const_                                                                                                          
+; │ 0x000023c6      488b15eb2b00.  mov rdx, qword [0x00004fb8]           ; [0x4fb8:8]=0x5450 method.std::basic_ostream_char__std::char_traits_char____std::endl_char__std.char_traits_char____std::basic_ostream_char__std::char_traits_char____                                                                                                                                                                                                                                        
+; │ 0x000023cd      4889d6         mov rsi, rdx
+; │ 0x000023d0      4889c7         mov rdi, rax
+; │ 0x000023d3      e8e8fcffff     call sym std::ostream::operator<<(std::ostream& (*)(std::ostream&)) ; sym.imp.std::ostream::operator___std::ostream____std::ostream__
+; │ 0x000023d8      bf00000000     mov edi, 0
+; └ 0x000023dd      e81efdffff     call sym.imp.exit
+; | // true: 0x000023e2
+; [0x00002279]> 
 
 
 
