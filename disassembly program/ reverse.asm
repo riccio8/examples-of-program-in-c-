@@ -150,7 +150,7 @@ entry0 0x21a4 [DATA] lea rdi, [main]
 │ 0x00002363      4889d6         mov rsi, rdx
 │ 0x00002366      4889c7         mov rdi, rax
 ; │ 0x00002369      e852fdffff     call sym std::ostream::operator<<(std::ostream& (*)(std::ostream&)) ; sym.imp.std::ostream::operator___std::ostream____std::ostream__
-; │ 0x0000236e      bf00000000     mov edi, 0
+; │ 0x0000236e      bf00000000     mov edi, 0 
 ; │ 0x00002373      e888fdffff     call sym.imp.exit
 ; | // true: 0x00002378
 ; │ ; CODE XREF from main @ 0x2341
