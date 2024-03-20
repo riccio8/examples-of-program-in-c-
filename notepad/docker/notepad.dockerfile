@@ -8,6 +8,6 @@ RUN dpkg --add-architecture i386 && \
     apt-get update && \
     apt-get install -y wine
 
-COPY programma.exe /programma.exe
+COPY notepad.exe /notepad.exe
 
-CMD ["wine", "/programma.exe"]
+CMD ["wine", "/notepad.exe"]
