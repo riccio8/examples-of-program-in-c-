@@ -76,8 +76,20 @@ Notes
     
     Ensure that Docker is installed and running on your system before following the above steps.
     Replace cpp-windows-container with your preferred image name if desired.
+
+`Instead` if u want to run the notepad exe on linux-based OS you must use the docker-engine file that I gave in the notepad directory
+    As for the other program, ensure that you are on the right directory and than build and run the docker container:
+build:
+    ```bash
+    docker build -t notepad-container -f notepad.dockerfile.
+    ```
+
+run
+    ```bash 
+    docker run --rm -it notepad-container
+    ```
     
-`I NEED TO TEST THIS TYPE OF INSTALLATION`
+###`I NEED TO TEST THIS TYPE OF INSTALLATION`
 
 ## Usage
 
