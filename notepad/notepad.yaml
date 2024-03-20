@@ -4,12 +4,12 @@ application:
   development_status: in_progress
 
 dependencies:
-  - wxWidgets
-  - wx/wx.h
-  - wx/textctrl.h
-  - wx/menu.h
-  - wx/frame.h
-  - wx/filedlg.h
+  - Qt
+  - -----
+  - -----
+  - -----
+  - -----
+  - -----
 
 platform:
   supported_os:
