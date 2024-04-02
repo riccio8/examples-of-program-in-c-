@@ -81,15 +81,15 @@ Notes
     As for the other program, ensure that you are on the right directory and than build and run the docker container:
 build:
 
-    ```bash
-    docker build -t notepad-container -f notepad.dockerfile.
-    ```
+```bash
+docker build -t notepad-container -f notepad.dockerfile.
+```
 
 run
 
-    ```bash 
-    docker run --rm -it notepad-container
-    ```
+```bash 
+docker run --rm -it notepad-container
+```
     
 ### `I NEED TO TEST THIS TYPE OF INSTALLATION`
 
