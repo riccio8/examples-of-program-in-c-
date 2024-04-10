@@ -1,3 +1,6 @@
+// script for memory leak, it works only on linux based machine
+
+
 #include <stdlib.h>
 using namespace std;
 
