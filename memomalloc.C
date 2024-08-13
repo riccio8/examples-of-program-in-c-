@@ -1,14 +1,13 @@
-// script for memory leak, it works only on linux based machine
-
-
 #include <stdlib.h>
+#include <iostream>
+
 using namespace std;
 
-int main()
-{
-  for(;;){
-    malloc(1024 * 50);
-  }
-
-  return 0;
+int main() {
+    for(;;) {
+        void* ptr = malloc(1024 * 50);
+            cerr << "Memory allocation failed!" << endl;
+            break; 
+        }
+    return 0;
 }
