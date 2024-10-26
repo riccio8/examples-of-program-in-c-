@@ -12,43 +12,43 @@ std::condition_variable cv;
 std::queue<int> tasks;
 bool finished = false; 
 
-std::vector<int> trova_divisore(int n) {
-    std::vector<int> divisori;
+std::vector<int> find_divisors(int n) {
+    std::vector<int> divisors;
     int sqrt_n = std::sqrt(n);
     for (int i = 1; i <= sqrt_n; ++i) {
         if (n % i == 0) {
-            divisori.push_back(i);
+            divisors.push_back(i);
             if (i != 1 && i != n / i) {
-                divisori.push_back(n / i);
+                divisors.push_back(n / i);
             }
         }
     }
-    return divisori;
+    return divisors;
 }
 
-void check_moltiplicatore() {
+void check_multiplier() {
     while (true) {
         int n;
         {
             std::unique_lock<std::mutex> lock(queue_mutex);
             cv.wait(lock, [] { return !tasks.empty() || finished; });
-            if (finished && tasks.empty()) break; // Esci se finito
+            if (finished && tasks.empty()) break; // Exit if finished
             n = tasks.front();
             tasks.pop();
         }
 
-        std::vector<int> divisori = trova_divisore(n);
-        int somma = 0;
+        std::vector<int> divisors = find_divisors(n);
+        int sum = 0;
 
-        for (int d : divisori) {
-            somma += d; 
+        for (int d : divisors) {
+            sum += d; 
         }
 
-        if (somma == n) {
+        if (sum == n) {
             std::lock_guard<std::mutex> guard(cout_mutex);
-            std::cout << "FOUNDED NUMBER!! for number n: " << n 
-                      << " divisori: ";
-            for (int d : divisori) {
+            std::cout << "FOUND PERFECT NUMBER! for number n: " << n 
+                      << " divisors: ";
+            for (int d : divisors) {
                 std::cout << d << " ";
             }
             std::cout << std::endl;
@@ -60,9 +60,9 @@ int main() {
     int max_range;
     int min_range;
 
-    std::cout << "Enter the max range (eg: 1 to N): ";
+    std::cout << "Enter the maximum range (e.g., 1 to N): ";
     std::cin >> max_range;
-    std::cout << "Enter minimum range (eg: N to 1): "; 
+    std::cout << "Enter minimum range (e.g., N to 1): "; 
     std::cin >> min_range; 
 
     const int num_threads = std::thread::hardware_concurrency();
@@ -76,9 +76,8 @@ int main() {
         cv.notify_one(); 
     }
     for (int i = 0; i < num_threads; ++i) {
-        threads.emplace_back(check_moltiplicatore);
+        threads.emplace_back(check_multiplier);
     }
-
 
     {
         std::lock_guard<std::mutex> lock(queue_mutex);
