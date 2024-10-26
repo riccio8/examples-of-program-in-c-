@@ -7,4 +7,3 @@ This program introduces the concept of pointers in C++. It shows how to declare 
 1. Compile the program using:
    ```bash
    g++ BasicPointers.cpp -o BasicPointers
-```
