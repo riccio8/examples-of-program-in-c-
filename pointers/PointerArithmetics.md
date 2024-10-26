@@ -7,4 +7,3 @@ This program demonstrates pointer arithmetic in C++. It shows how to access arra
 1. Compile the program using:
    ```bash
    g++ PointerArithmetic.cpp -o PointerArithmetic
-```
