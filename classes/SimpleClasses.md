@@ -7,4 +7,4 @@ This program demonstrates a basic class in C++. It defines a `Dog` class with at
 1. Compile the program using:
    ```bash
    g++ SimpleClass.cpp -o SimpleClass
-  ```
+  
