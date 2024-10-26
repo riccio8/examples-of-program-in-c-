@@ -7,4 +7,3 @@ This program demonstrates the concept of function pointers in C++. It shows how 
 1. Compile the program using:
    ```bash
    g++ FunctionPointers.cpp -o FunctionPointers
-```
