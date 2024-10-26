@@ -2,40 +2,37 @@
 #include <random>
 using namespace std;
 
-string gen(int lun) {
+string generate(int length) {
     string password;
 
-string caratteri = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                    "abcdefghijklmnopqrstuvwxyz"
-                    "0123456789"
-                    "!@#$%^&*()_+=-"
-                    "$€£¥??"
-                    "??????????"
-                    "±÷×==?˜8??"
-                    "????????????????????????????????????????????????????????????????";
-
+    string characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        "abcdefghijklmnopqrstuvwxyz"
+                        "0123456789"
+                        "!@#$%^&*()_+=-"
+                        "$ï¿½ï¿½ï¿½??"
+                        "??????????"
+                        "ï¿½ï¿½ï¿½==?ï¿½8??"
+                        "????????????????????????????????????????????????????????????????";
 
     random_device rd;
-    mt19937 generatore(rd());
-    uniform_int_distribution<> distribuzione(0, caratteri.size() - 1);
+    mt19937 generator(rd());
+    uniform_int_distribution<> distribution(0, characters.size() - 1);
 
-    for (int i = 0; i < lun; ++i) {
-        char carattereCasuale = caratteri[distribuzione(generatore)];
-        password += carattereCasuale;
+    for (int i = 0; i < length; ++i) {
+        char randomCharacter = characters[distribution(generator)];
+        password += randomCharacter;
     }
 
-    cout << "Password generata: " << password << endl;
+    cout << "Generated password: " << password << endl;
     return password; 
 }
 
 int main() {
-	while (true)
-	{
-	   int lunghezza;
-	    cout << "Inserisci la lunghezza della password: ";
-	    cin >> lunghezza;
-	    gen(lunghezza); 
-	    return 0;
-	}
-
+    while (true) {
+       int length;
+       cout << "Enter the password length: ";
+       cin >> length;
+       generate(length); 
+       return 0;
+    }
 }
