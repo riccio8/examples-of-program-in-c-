@@ -1,5 +1,6 @@
 #include <iostream>
 #include <random>
+#include <string>
 using namespace std;
 
 string generate(int length) {
@@ -32,7 +33,7 @@ int main() {
        int length;
        cout << "Enter the password length: ";
        cin >> length;
-       generate(length); 
-       return 0;
+       generate(length);
     }
+    return 0;  // Program will end only if the while loop is exited
 }
