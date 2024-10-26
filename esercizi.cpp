@@ -2,17 +2,17 @@
 using namespace std;
 
 int main() {
-    int numero;
+    int number;
 
     do {
-        cout << "Inserisci un numero: ";
-        cin >> numero;
+        cout << "Insert a number: \n";
+        cin >> number;
 
-        if (numero % 7 == 0)
+        if (number % 7 == 0)
             break;
     } while (true);
 
-    cout << "Il numero inserito è divisibile per 7." << endl;
+    cout << "Number is divisible by 7." << endl;
 
     return 0;
 }
