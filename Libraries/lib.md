@@ -8,7 +8,7 @@
 
 1. [Multithreading](#-multithreading)
 2. [cmath](#-cmath)
-3. [<algorithm>](#algorithm)
+3. [<algorithm>](#-algorithm)
 4. [<string>](#string)
 5. [<iostream>](#iostream)
 6. [<fstream>](#fstream)
@@ -71,9 +71,7 @@ In this snippet, we’re using `sqrt` to find the square root, just like a math 
 
 ---
 
-## 📦 Other Standard Libraries
-
-### 🔧 algorithm
+## 🔧 algorithm
 
 If `cmath` is your math toolbox, then `<algorithm>` is the Swiss Army knife for programming. It’s got all the tools you need to sort, search, and mess with your data like a pro.
 
