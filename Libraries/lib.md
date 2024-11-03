@@ -75,7 +75,7 @@ In this snippet, we’re using `sqrt` to find the square root, just like a math 
 
 If `cmath` is your math toolbox, then `<algorithm>` is the Swiss Army knife for programming. It’s got all the tools you need to sort, search, and mess with your data like a pro.
 
-#### 🔍 Example of <algorithm>
+#### 🔍 Example of algorithm
 
 ```cpp
 #include <iostream>
@@ -99,11 +99,11 @@ int main() {
 
 Here, we’re using `std::sort` to arrange our numbers from smallest to largest, like putting your shoes in order from fresh kicks to your beat-up old sneakers.
 
-### 📝 <string>
+### 📝 string
 
 Now let’s get real with strings. The `<string>` library is like your trusty notebook for handling all that text and characters. Whether you’re putting together a message or chopping up some text, this library’s got your back.
 
-#### 🔍 Example of <string>
+#### 🔍 Example of string
 
 ```cpp
 #include <iostream>
@@ -121,11 +121,11 @@ int main() {
 
 In this example, we’re creating a simple string and checking how many characters are in it, kinda like counting the words in your favorite song lyric.
 
-### 📬 <iostream>
+### 📬 iostream
 
 Let’s not forget about `<iostream>`. This bad boy is your go-to for input and output. It’s like your front desk for getting and sending info to and from your program.
 
-#### 🔍 Example of <iostream>
+#### 🔍 Example of iostream
 
 ```cpp
 #include <iostream>
@@ -144,11 +144,11 @@ int main() {
 
 This snippet shows how to print to the console and take input from the user, like having a convo with your program.
 
-### 📂 <fstream>
+### 📂 fstream
 
 Next up is `<fstream>`. Think of it like your library card for reading and writing files. It helps you store data like a boss, so you don’t have to remember everything.
 
-#### 🔍 Example of <fstream>
+#### 🔍 Example of fstream
 
 ```cpp
 #include <iostream>
@@ -170,11 +170,11 @@ int main() {
 
 In this example, we’re creating a file and writing some text into it, kinda like jotting down notes in your diary.
 
-### 🗺️ <map>
+### 🗺️ map
 
 Let’s talk about `<map>`. This library is like your organized closet, where you can keep track of pairs of keys and values. It’s super useful for storing data that you want to look up quickly.
 
-#### 🔍 Example of <map>
+#### 🔍 Example of map
 
 ```cpp
 #include <iostream>
@@ -194,11 +194,11 @@ int main() {
 
 Here, we’re using a map to associate names with scores, like keeping track of your friends' high scores in a game.
 
-### 🔢 <set>
+### 🔢 set
 
 Last but not least, we’ve got `<set>`. This library is like a special collection where you can keep unique items. No duplicates allowed, just like your favorite playlist.
 
-#### 🔍 Example of <set>
+#### 🔍 Example of set
 
 ```cpp
 #include <iostream>
