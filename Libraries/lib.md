@@ -1,25 +1,23 @@
----
 
 # README for Standard C++ Libraries
 
 **Yo!** Welcome to the ultimate guide on some of the most dope libraries in C++. We’re gonna break it down nice and easy, so you can get the hang of this stuff without breaking a sweat.
 
----
 
 ## 📚 Table of Contents
 
 1. [Multithreading](#multithreading)
 2. [cmath](#cmath)
-3. [Other Standard Libraries](#other-standard-libraries)
-    - [<algorithm>](#algorithm)
-    - [<string>](#string)
-    - [<iostream>](#iostream)
-    - [<fstream>](#fstream)
-    - [<map>](#map)
-    - [<set>](#set)
-4. [Common Conventions](#common-conventions)
+3. [<algorithm>](#algorithm)
+4. [<string>](#string)
+5. [<iostream>](#iostream)
+6. [<fstream>](#fstream)
+7. [<map>](#map)
+8. [<set>](#set)
+9. [Common Conventions](#common-conventions)
 
----
+
+
 
 ## 🧵 Multithreading
 
@@ -75,7 +73,7 @@ In this snippet, we’re using `sqrt` to find the square root, just like a math 
 
 ## 📦 Other Standard Libraries
 
-### 🔧 <algorithm>
+### 🔧 algorithm
 
 If `cmath` is your math toolbox, then `<algorithm>` is the Swiss Army knife for programming. It’s got all the tools you need to sort, search, and mess with your data like a pro.
 
@@ -256,5 +254,3 @@ Now that you’re cruising with these libraries, let’s hit up some common conv
 ## 🎉 Wrapping Up
 
 There you have it, folks! A quick rundown of some standard C++ libraries that’ll help you get your programming game on point. Keep this guide handy, and you’ll be slinging code like a pro in no time!
-
---- 
