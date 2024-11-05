@@ -139,3 +139,6 @@ That’s a wrap! Now you have a better understanding of how to make a process es
 
 - **Always test in a safe environment** (like a VM).
 - **Be aware of the legal implications** of kernel-level programming.
+
+## Resources
+(for token offset)[https://github.com/XaFF-XaFF/Kernel-Process-Hollowing]
