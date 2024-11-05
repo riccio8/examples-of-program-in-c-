@@ -141,4 +141,5 @@ That’s a wrap! Now you have a better understanding of how to make a process es
 - **Be aware of the legal implications** of kernel-level programming.
 
 ## Resources
-(for token offset)[https://github.com/XaFF-XaFF/Kernel-Process-Hollowing]
+
+[for token offset](https://github.com/XaFF-XaFF/Kernel-Process-Hollowing)
