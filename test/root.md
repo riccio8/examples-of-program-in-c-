@@ -142,4 +142,4 @@ That’s a wrap! Now you have a better understanding of how to make a process es
 
 ## Resources
 
-[for token offset](https://github.com/XaFF-XaFF/Kernel-Process-Hollowing)
+[for token offset](https://github.com/XaFF-XaFF/Cronos-Rootkit/tree/master)
